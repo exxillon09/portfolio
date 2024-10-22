@@ -1,0 +1,824 @@
+/* Сброс стилей */
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Основные стили */
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 80%; /* Изменен для удобства на разных экранах */
+    margin: 0 auto;
+}
+.container h2{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    padding-bottom: 20px;
+}
+
+/* Меню */
+.menu {
+    background-color: #333;
+}
+
+.menu_inner {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    color: #999;
+    font-size: 30px;
+}
+
+.nav li {
+    margin-left: 20px;
+}
+
+.nav li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 30px;
+    transition: background-color 0.3s;
+}
+
+.nav li a:hover {
+    background-color: rgb(240, 164, 2);
+    border-radius: 5px;
+}
+
+/* Коробки */
+.korobka {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0;
+    border: 1px solid none;
+    padding: 20px;
+    background-color: #fff;
+}
+
+a{
+    list-style: none;
+    text-decoration: none;
+}
+
+.korobka_1, .korobka_2 {
+    flex: 1;
+}
+
+.korobka_2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Заголовки */
+.name {
+    font-size: 100px;
+    color: black;
+}
+
+.tiz {
+    font-size: 40px;
+    margin-top: 0;
+}
+
+/* Кнопка */
+.button {
+    display: flex;
+    justify-content: left;
+}
+
+.button h3 {
+    border-radius: 30px;
+    padding: 10px 30px;
+    background-color: orange;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button a{
+    color: black;
+}
+
+.button h3:hover {
+    background-color: wheat;
+}
+
+/* Приветствие */
+.koshik {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.koshik i {
+    font-size: 75px;
+}
+.koshik a{
+    color: black;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: orange;
+    transition: background-color 0.3s;
+    
+}
+.privet h3 {
+    font-size: 40px;
+    color: black;
+}
+
+.privet h4 {
+    font-size: 25px;
+}
+
+/* Навыки */
+.skills {
+    margin: 40px 0;
+    text-align: center;
+    border: 1px solid none;
+    padding: 20px;
+}
+.skills>h2{
+    font-size: 50px;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    
+}
+.cards > .card img {
+    width: 175px; /* Изменено с 100px на 150px */
+    height: 175px; /* Изменено с 100px на 150px */
+}
+
+.card {
+    background-color: #fff;
+    padding: 100px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Статистика */
+.box {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(227, 127, 8, 0.937) 100%, rgba(0, 212, 255, 1) 100%);
+    padding: 40px;
+    margin: 20px 0;
+}
+
+.box_inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.item {
+    text-align: center;
+}
+
+.number {
+    color: white;
+    font-size: 70px;
+}
+
+.text {
+    color: rgb(218, 125, 11);
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.line {
+    width: 40px;
+    height: 3px;
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+
+.item i {
+    font-size: 70px;
+    color: rgb(218, 125, 11);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Применение анимаций */
+.koshik, .skills, .box {
+    animation: slideIn 0.5s forwards;
+    opacity: 0; /* Исходное состояние для анимации */
+}
+
+.koshik {
+    animation-delay: 0.3s;
+}
+
+.skills {
+    animation-delay: 0.5s;
+}
+
+.box {
+    animation-delay: 0.7s;
+}
+
+/* Анимация для секции приветствия */
+.koshik {
+    opacity: 0; /* Исходное состояние для анимации */
+    animation: slideIn 0.5s forwards; /* Применяем анимацию */
+    animation-delay: 0.3s; /* Задержка перед началом анимации */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Общие стили */
+body {
+    transition: background-color 0.3s, color 0.3s; /* Плавные переходы */
+}
+
+.light-theme {
+    background-color: #ffffff; /* Светлый фон */
+    color: #333333; /* Темный текст */
+}
+
+.dark-theme {
+    background-color: #121212; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+}
+
+/* Стили для меню */
+.menu {
+    background-color: #f8f8f8; /* Светлое меню */
+}
+
+.light-theme .menu {
+    background-color: #f8f8f8; /* Светлое меню */
+}
+
+.dark-theme .menu {
+    background-color: #1f1f1f; /* Темное меню */
+}
+
+/* Стили для кнопок и ссылок */
+.nav li a {
+    color: #333333; /* Темный текст для ссылок */
+}
+
+.light-theme .nav li a {
+    color: #333333; /* Темный текст в светлой теме */
+}
+
+.dark-theme .nav li a {
+    color: #e0e0e0; /* Светлый текст в темной теме */
+}
+
+.nav li a:hover {
+    background-color: rgb(240, 164, 2); /* Цвет при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
+.dark-theme .nav li a:hover {
+    background-color: rgba(240, 164, 2, 0.7); /* Темная тема - цвет при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
+/* Пример для других элементов */
+.box {
+    border: 1px solid #ccc; /* Светлая граница */
+}
+
+.light-theme .box {
+    border: 1px solid #ddd; /* Светлая граница */
+}
+
+.dark-theme .box {
+    border: 1px solid #444; /* Темная граница */
+}
+
+/* Остальные стили остаются прежними, не забудь добавить их здесь */
+.theme-switcher {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание по правому краю */
+    margin: 20px; /* Отступ сверху и снизу */
+}
+
+#toggle-theme {
+    background-color: rgb(240, 164, 2); /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста */
+    border: none; /* Без рамки */
+    border-radius: 5px; /* Закругленные углы */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s, transform 0.2s; /* Плавные переходы */
+}
+
+#toggle-theme:hover {
+    background-color: #d89a00; /* Темнее при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.menu_inner {
+    display: flex;
+    justify-content: center; /* Центрируем содержимое */
+    align-items: center; /* Выравниваем по центру по вертикали */
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 20px; /* Отступы для навигации */
+}
+
+.theme-switcher {
+    margin-left: 20px; /* Отступ между навигацией и кнопкой темы */
+}
+
+.face {
+    width: 500px; /* Убедись, что ширина соответствует остальным элементам */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    opacity: 0; /* Скрыто изначально */
+    transform: scale(0.9); /* Уменьшено для эффекта увеличения */
+    animation: fadeIn 1s forwards, scaleUp 1s forwards; /* Применение анимации */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Появление */
+    }
+}
+
+@keyframes scaleUp {
+    to {
+        transform: scale(1); /* Увеличение до нормального размера */
+    }
+}
+
+.hobby-section {
+    margin: 50px auto;
+    text-align: center; /* Центрируем текст */
+}
+
+.hobby-section h2 {
+    font-size: 50px;
+    color: #333; /* Цвет заголовка */
+}
+
+.hobby-list {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: center; /* Центрирование элементов */
+    margin-top: 20px;
+}
+
+.hobby-item {
+    background-color: #f4f4f4; /* Светлый фон для элементов хобби */
+    border: 1px solid #ddd; /* Рамка */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 20px; /* Отступы */
+    margin: 10px 0; /* Отступы между элементами */
+    width: 80%; /* Ширина элементов */
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.hobby-item:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.hobby-item h3 {
+    color: rgb(240, 164, 2); /* Цвет заголовка хобби */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.hobby-item p {
+    color: #555; /* Цвет текста */
+    font-size: 18px; /* Размер шрифта */
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center; /* Центрируем галерею */
+    flex-wrap: wrap; /* Перенос изображений на новую строку */
+    margin-top: 15px; /* Отступ сверху */
+}
+
+.photo-gallery img {
+    width: 250px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin: 5px; /* Отступы между изображениями */
+    border-radius: 5px; /* Закругленные углы */
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.photo-gallery img:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+.book-gallery {
+    display: flex;
+    justify-content: center; /* Центрируем галерею */
+    flex-wrap: wrap; /* Перенос изображений на новую строку */
+    margin-top: 15px; /* Отступ сверху */
+}
+
+.book-gallery img {
+    width: 250px; /* Ширина изображения */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin: 5px; /* Отступы между изображениями */
+    border-radius: 5px; /* Закругленные углы */
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.book-gallery img:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+////////////////////////////////////////////////////////
+
+.hobby-item {
+    display: flex;
+    justify-content: center; /* Центрируем галерею */
+    flex-wrap: wrap; /* Перенос изображений на новую строку */
+    margin-top: 15px; /* Отступ сверху */
+}
+
+.hobby-item img {
+    width: 350px; /* Ширина изображения */
+    height: 500px; /* Автоматическая высота для сохранения пропорций */
+    margin: 5px; /* Отступы между изображениями */
+    border-radius: 5px; /* Закругленные углы */
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.hobby-item img:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+/////////////////////////////////////////////////////////////
+
+.hobby-item_2 {
+    display: flex;
+    justify-content: center; /* Центрируем галерею */
+    flex-wrap: wrap; /* Перенос изображений на новую строку */
+    margin-top: 15px; /* Отступ сверху */
+}
+
+.hobby-item_2 img {
+    width: 400px; /* Ширина изображения */
+    height: 400px; /* Автоматическая высота для сохранения пропорций */
+    margin: 5px; /* Отступы между изображениями */
+    border-radius: 5px; /* Закругленные углы */
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.hobby-item_2 img:hover {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
+}
+
+.hobby-item_2 {
+    background-color: #f4f4f4; /* Светлый фон для элементов хобби */
+    border: 1px solid #ddd; /* Рамка */
+    border-radius: 8px; /* Закругленные углы */
+    padding: 20px; /* Отступы */
+    margin: 10px 0; /* Отступы между элементами */
+    width: 80%; /* Ширина элементов */
+    transition: transform 0.3s; /* Плавный эффект при наведении */
+}
+
+.hobby-item_2:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav li a {
+    display: flex;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 30px;
+    transition: background-color 0.3s; /* Плавный переход цвета */
+}
+
+.nav li a:hover {
+    background-color: rgb(240, 164, 2); /* Цвет при наведении */
+    border-radius: 5px; /* Закругление углов */
+}
+
+.contacts-section {
+    padding: 50px;
+    background-color: whitesmoke; /* Светлый фон */
+    text-align: center; /* Центрирование текста */
+}
+
+.contacts-section h2 {
+    color: orange;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contacts-section ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.contacts-section li {
+    margin: 10px 0; /* Отступы между элементами списка */
+}
+
+.contacts-section a {
+    text-decoration: none; /* Убираем подчеркивание ссылок */
+    color: #000000; /* Цвет ссылок */
+}
+
+.contacts-section a:hover{
+    color: orange; /* Цвет ссылок */
+}
+
+html {
+    scroll-behavior: smooth; /* Плавная прокрутка */
+}
+
+/* Добавьте любые другие стили для анимации или эффекта при наведении на кнопки */
+.nav a {
+    transition: color 0.5s ease; /* Плавная смена цвета текста при наведении */
+}
+
+.nav a:hover {
+    color: #ff6347; /* Например, изменение цвета при наведении */
+}
+
+.naviki a {
+    display: inline-block; /* Позволяет использовать transform */
+    padding: 10px 20px; /* Добавьте отступы для кнопки */
+    text-decoration: none; /* Уберите подчеркивание */
+    color: #000; /* Цвет текста */
+    background-color: orange;
+    border-radius: 5px; /* Скругление углов */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Плавный эффект */
+}
+
+.naviki a:hover {
+    transform: scale(1.1); /* Увеличение размера кнопки */
+    background-color: #e0e0e0; /* Изменение цвета фона при наведении */
+}
+.koshik i{
+    color: orange;
+}
+
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.koshik, .skills, .box {
+    will-change: opacity, transform;
+}
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        font-size: 20px; /* Adjust font size */
+    }
+    .korobka {
+        flex-direction: column;
+    }
+}
+:root {
+    --primary-color: rgb(240, 164, 2);
+    --text-color: #000;
+}
+.nav li a {
+    color: var(--text-color);
+}
+.nav li a, .button h3, .koshik a {
+    color: #000;
+    text-decoration: none;
+}
+
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bitter-<uniquifier> {
+    font-family: "Bitter", serif;
+  }
+.korobka_2 img{
+    transform: scale(1.05);
+}
+
+.svaz{
+    display: flex;
+    justify-content: center;
+}
+form {
+	background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid none;
+    width: 570px;
+    padding: 18px 14px;
+    font-family: system-ui;
+    margin: 0 300px;
+}
+
+input {
+	padding: 3px 3px;
+    margin: 6px 0;
+    border-radius: 4px;
+    border: 1px solid #626161;
+}
+
+.form-title {
+    font-size: 30px;
+	text-align: center;
+    margin: 8px;
+    font-weight: 600;
+}
+
+.submit-btn {
+	background-color: orange;
+    border: none;
+    color: #fff;
+   	font-size: 14px;
+}
+
+.svaz {
+    display: flex; /* Делаем контейнер флекс-контейнером */
+    align-items: center; /* Выравниваем по центру по вертикали */
+    justify-content: space-between; /* Распределяем пространство между элементами */
+    text-align: left; /* Выравнивание текста влево */
+    padding: 20px; /* Отступы внутри блока */
+}
+
+form {
+    background-color: #f9f9f9; /* Фон для формы */
+    padding: 20px; /* Отступы внутри формы */
+    border-radius: 10px; /* Закругленные углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тень для формы */
+}
+
+input {
+    width: 100%; /* Занимаем всю ширину */
+    margin-bottom: 15px; /* Отступ между полями */
+    padding: 10px; /* Отступы внутри полей */
+    border: 1px solid #ccc; /* Граница полей */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+.submit-btn {
+    background-color: orange; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Без границы */
+    padding: 10px; /* Отступы внутри кнопки */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer; /* Курсор при наведении */
+}
+.chel img{
+    height: auto;
+    width: 350px;
+}
+.last{
+    display: flex;
+}
+
+.svaz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    
+    opacity: 0; /* Исходное состояние (скрыто) */
+    transform: translateY(20px); /* Сдвинут вниз */
+    animation: slideIn 0.5s forwards; /* Применение анимации */
+    animation-delay: 0.3s; /* Задержка перед началом анимации */
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1; /* Конечное состояние (видимо) */
+        transform: translateY(0); /* Вернуться на место */
+    }
+}
+
+.chel img {
+    width: 350px; /* Задайте нужную ширину */
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    margin-left: 20px; /* Отступ между текстом и изображением */
+    opacity: 0; /* Исходное состояние (скрыто) */
+    animation: fadeIn 1s forwards; /* Применение анимации */
+    animation-delay: 0.5s; /* Задержка перед началом анимации */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Конечное состояние (видимо) */
+    }
+}
+
+/* Основные стили для анимации */
+.visible {
+    opacity: 1; /* Элемент будет видим */
+    transform: translateY(0); /* Сдвинут вверх */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавный переход */
+}
+
+section {
+    opacity: 0; /* Элемент изначально скрыт */
+    transform: translateY(20px); /* Сдвинут вниз */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Плавный переход */
+}
+.contacts-section{
+    padding-top: 0;
+}
+.infa {
+    width: 1170px;
+    padding: 20px; /* Отступы */
+    background-color: #f9f9f9; /* Фоновый цвет */
+    border: 1px solid #ddd; /* Рамка */
+    border-radius: 8px; /* Закругленные углы */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+    margin: 0 auto;
+}
+
+.infa-title {
+    font-size: 24px; /* Размер шрифта заголовка */
+    margin-bottom: 10px; /* Отступ снизу */
+    color: #333; /* Цвет текста */
+}
+.infa p{
+    font-size: 20px;
+}
+.infa h3{
+    font-size: 35px;
+    padding: 0 0;
+    margin: 0 auto;
+}
+.infa h4{
+    font-size: 25px;
+}
+.infa img{
+    height: auto;
+    width: 550px;
+}
